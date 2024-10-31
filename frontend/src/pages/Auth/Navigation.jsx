@@ -60,19 +60,8 @@ const Navigation = () => {
                     <AiOutlineShopping className="mr-2 mt-[3rem]" size={26} />
                     <span className="hidden nav-item-name mt-[3rem]">SHOP</span>
                 </Link>
-                <Link
-                    to="/cart"
-                    className="flex items-center transition-transform transform hover:translate-x-2"
-                >
-                    <AiOutlineShoppingCart className="mr-2 mt-[3rem]" size={26} />
-                    <span className="hidden nav-item-name mt-[3rem]">Cart</span>
-                </Link>
-                <Link to="/checkedlist" className="flex relative">
-                    <div className="flex justify-center items-center transition-transform transform hover:translate-x-2">
-                        <AiOutlineCheckCircle className="mt-[3rem] mr-2" size={20} />
-                        <span className="hidden nav-item-name mt-[3rem]">Checked List</span>
-                    </div>
-                </Link>
+            
+          
             </div>
             <div className="relative">
                 <button
