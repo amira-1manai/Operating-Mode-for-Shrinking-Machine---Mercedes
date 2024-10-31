@@ -16,9 +16,7 @@ const Register = () => {
   const navigate = useNavigate();
 
   const [register, { isLoading }] = useRegisterMutation();
-
   const { userInfo } = useSelector((state) => state.auth);
-
   const { search } = useLocation();
   const sp = new URLSearchParams(search);
   const redirect = sp.get("redirect") || "/";
@@ -48,16 +46,13 @@ const Register = () => {
   };
 
   return (
-    <section className="pl-[10rem] flex flex-wrap">
-      <div className="mr-[4rem] mt-[5rem]">
-        <h1 className="text-2xl font-semibold mb-4">Register</h1>
+    <section className="flex flex-col items-center justify-center min-h-screen animate-fadeIn">
+      <div className="mt-5">
+        <h1 className="text-2xl font-semibold mb-4 text-pink-500">Register</h1>
 
         <form onSubmit={submitHandler} className="container w-[40rem]">
           <div className="my-[2rem]">
-            <label
-              htmlFor="name"
-              className="block text-sm font-medium text-white"
-            >
+            <label htmlFor="name" className="block text-sm font-medium text-pink-500">
               Name
             </label>
             <input
@@ -71,10 +66,7 @@ const Register = () => {
           </div>
 
           <div className="my-[2rem]">
-            <label
-              htmlFor="email"
-              className="block text-sm font-medium text-white"
-            >
+            <label htmlFor="email" className="block text-sm font-medium text-pink-500">
               Email Address
             </label>
             <input
@@ -88,10 +80,7 @@ const Register = () => {
           </div>
 
           <div className="my-[2rem]">
-            <label
-              htmlFor="password"
-              className="block text-sm font-medium text-white"
-            >
+            <label htmlFor="password" className="block text-sm font-medium text-pink-500">
               Password
             </label>
             <input
@@ -105,10 +94,7 @@ const Register = () => {
           </div>
 
           <div className="my-[2rem]">
-            <label
-              htmlFor="confirmPassword"
-              className="block text-sm font-medium text-white"
-            >
+            <label htmlFor="confirmPassword" className="block text-sm font-medium text-pink-500">
               Confirm Password
             </label>
             <input
@@ -124,7 +110,7 @@ const Register = () => {
           <button
             disabled={isLoading}
             type="submit"
-            className="bg-pink-500 text-white px-4 py-2 rounded cursor-pointer my-[1rem]"
+            className="bg-pink-500 text-white px-4 py-2 rounded cursor-pointer my-[1rem] transform transition-transform duration-300 hover:scale-105"
           >
             {isLoading ? "Registering..." : "Register"}
           </button>
@@ -132,8 +118,8 @@ const Register = () => {
           {isLoading && <Loader />}
         </form>
 
-        <div className="mt-4">
-          <p className="text-white">
+        <div className="mt-4 text-center">
+          <p className="text-pink-500">
             Already have an account?{" "}
             <Link
               to={redirect ? `/login?redirect=${redirect}` : "/login"}
@@ -144,11 +130,29 @@ const Register = () => {
           </p>
         </div>
       </div>
+
       <img
-        src="https://images.unsplash.com/photo-1576502200916-3808e07386a5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2065&q=80"
-        alt=""
-        className="h-[65rem] w-[59%] xl:block md:hidden sm:hidden rounded-lg"
+        src="https://managers.tn/wp-content/uploads/2024/03/Sumitomo-Electric-Bordnetze-lance-la-construction-de-sa-troisieme-et-plus-grande-usine-a-Jendouba.jpg"
+        alt="Sumitomo Electric Bordnetze"
+        className="h-[360px] w-[800px] rounded-lg mt-5"
       />
+
+      <style jsx>{`
+        @keyframes fadeIn {
+          0% {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+
+        .animate-fadeIn {
+          animation: fadeIn 0.5s ease forwards;
+        }
+      `}</style>
     </section>
   );
 };
