@@ -1,6 +1,6 @@
 🚀 Operating Mode for Shrinking Machine - Mercedes
 
-![Shrinking Machine Image](https://example.com/shrinking-machine-image)
+![maxresdefault](https://github.com/user-attachments/assets/7c0e0d20-7623-4feb-b9bb-9d1deb97b69a)
 
 Operating Mode for Shrinking Machine is a MERN stack application designed to manage and monitor the operational modes of Mercedes shrinking machines. This application allows users to view, modify, and control machine settings, ensuring efficient operation and maintenance.
 
@@ -38,8 +38,4 @@ This project is built using the MERN stack to help manage the operational modes 
 🛠️ Installation  
 Clone the repository:
 ```bash
-git clone https://github.com/amira-1manai/Operating-Mode-for-Shrinking-Machine-Mercedes
-Navigate to the project directory:cd Operating-Mode-for-Shrinking-Machine-Mercedes
-Install the necessary packages for the server:cd server
-npm install
-
+git clone
