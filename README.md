@@ -1,6 +1,8 @@
 🚀 Operating Mode for Shrinking Machine - Mercedes
 
 ![image](https://github.com/user-attachments/assets/59905c4d-dd22-43db-819c-d9d4033e9f19)
+![image](https://github.com/user-attachments/assets/77efd729-9d91-4f12-ac4d-87135cdbbb98)
+
 
 Operating Mode for Shrinking Machine is a MERN stack application designed to manage and monitor the operational modes of Mercedes shrinking machines. This application allows users to view, modify, and control machine settings, ensuring efficient operation and maintenance.
 
